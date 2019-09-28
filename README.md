@@ -1,4 +1,4 @@
-# Get started
+# Getting started
 
 Looking to get acquainted with the Grafana? You’ve come to the right place. Grafana is the open source analytics and monitoring solution for every database. The information in this guide assumes you have a working Grafana server up and running. To install Grafana, see the [Installing Grafana](https://grafana.com/docs/installation/) guide.
 
