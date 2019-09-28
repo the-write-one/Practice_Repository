@@ -25,7 +25,7 @@ You can change the password and user name after the initial login.
 4. Type your old password in the dialog box. Type a new password and confirm your new password.
 5. Click **Change Password**.
 
-Figure 1: 
+Video 1: Logging in and changing user name and password 
 
 ## Adding a data source
 A data source is needed before you can create your first dashboard. There are multiple ways to add a data source. The quickest way to add your data source is to:
@@ -47,12 +47,9 @@ It’s time to name your newly created data source.
 3. Click **Save and Test** after the data source is configured.
     If you click **Save and Test** before configuring your data source an error will appear.
 
-Figure 4: 
+Figure 2: Adding and naming the data source 
 
 
 
-![A screen shot instructing you place http://localhost:3000/ the browser address bar. Includes the username and password fields. for logging into Grafana]
 
-Figure 2: Admin Preferences
-![A screen shot showing 
 
