@@ -15,8 +15,8 @@ To start Grafana for the first time:
 5. Follow the prompt and change the **admin** password to a specialized password.
 6. Click **Save**.
 
-## Changing the password and user name
-You can change the password and user name after the initial login. 
+## Changing the username and password
+You can change the user name and password after the initial login. 
 1. Click the **admin** icon located on the bottom left of your **Home Dashboard** screen.
 2. Click **Preferences**. Type your new username in the **Username** dialog box.
 3. Click the **Change Password** tab to change your password.
