@@ -1,10 +1,10 @@
 # Getting started
 
-Looking to get acquainted with the Grafana? You’ve come to the right place. Grafana is the open source analytics and monitoring solution for every database. The information in this guide assumes you have a working Grafana server up and running. To install Grafana, see the [Installing Grafana](https://grafana.com/docs/installation/) guide.
+Welcome! Looking to get acquainted with the Grafana? You’ve come to the right place. Grafana is the open source analytics and monitoring solution for every database. The information in this guide assumes you have a working Grafana server up and running. To install Grafana, see the [Installing Grafana](https://grafana.com/docs/installation/) guide.
 
 ## Logging in 
 
-Grafana asks you to change your password when you log in for the first time. Choose a strong password at least 8 characters in length, including numbers, symbols, and uppercase and lowercase letters.
+Grafana asks you to change your password when you log in for the first time. Choose a strong password at least eight characters in length, including numbers, symbols, and uppercase and lowercase letters (example: Chloecat5!).
 
 To start Grafana for the first time:
 
