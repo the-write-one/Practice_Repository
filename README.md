@@ -25,7 +25,7 @@ You can change the user name and password after the initial login.
 
 **Video 1:** Logging in and changing user name and password 
 
-[![Alt text](https://img.youtube.com/vi/TswNJH7eHoI/0.jpg)](https://www.youtube.com/watch?v=TswNJH7eHoI)
+[![Alt text](https://img.youtube.com/vi/AZt65Sc6S7o/0.jpg)](https://www.youtube.com/watch?v=AZt65Sc6S7o)
 
 ## Adding a data source
 A data source is needed before you can create your first dashboard. There are multiple ways to add a data source. The quickest way to add your data source is to:
@@ -48,6 +48,7 @@ It’s time to name your newly created data source.
 
 **Video 2:** Adding and naming the data source 
 
+[![Alt text](https://img.youtube.com/vi/gENV_EXPG5o/0.jpg)](https://www.youtube.com/watch?v=gENV_EXPG5o)
 
 
 
