@@ -1,56 +1,199 @@
-# Getting started
 
-Welcome! Looking to get acquainted with the Grafana? You’ve come to the right place. Grafana is the open source analytics and monitoring solution for every database. The information in this guide assumes you have a working Grafana server up and running. To install Grafana, see the [Installing Grafana](https://grafana.com/docs/installation/) guide.
+## Adding Data Sources (Direct)
+Use the **Direct** connection if you want Nobl9 to access your server by connection directly over the internet. This method may be less secure, as you will need to open the port the data source is running on for Nobl9 to connect. 
 
-## Logging in 
+### AppDynamics
 
-Grafana asks you to change your password when you log in for the first time. Choose a strong password at least eight characters in length, including numbers, symbols, and uppercase and lowercase letters (example: Chloecat5!).
+1. Enter the **Controller URL** to connect your data source (required).
+   AppDynamics does not support user or agent requests that originate from any URL other than the **Controller URL**.
+   
+2. Enter your AppDynamics **ClientID**.
 
-To start Grafana for the first time:
+3. Enter your AppDynamics **Client Secret**.
 
-1. Open your browser and go to [http://localhost:3000](http://localhost:3000/). 
-    The link directs you to the login page. The default http port for Grafana is 3000. Use port 80 to [configure an alternative port](https://grafana.com/docs/installation/configuration/#http-port/). 
-3. Type **admin** as the default username.
-4. Type **admin** as the default password and click **Log In**. 
-5. Follow the prompt and change the **admin** password to a specialized password.
-6. Click **Save**.
+4. Enter a **Project** name.\
+   The **Project** field is intended for use in situation where multiple users are spread across multiple teams or 
+   projects. When **Project** field is left blank the typical **default** value appears.
+   
+5. The **Display Name** appears automatically when a name is entered into the **Name** field.
 
-## Changing the username and password
-You can change the user name and password after the initial login. 
-1. Click the **admin** icon located on the bottom left of your **Home Dashboard** screen.
-2. Click **Preferences**. Type your new username in the **Username** dialog box.
-3. Click the **Change Password** tab to change your password.
-4. Type your old password in the dialog box. Type a new password and confirm your new password.
-5. Click **Change Password**.
+6. Enter a **Name** (required).\
+    A **Name** is required because metadata names are unique within each
+    project and are validated against some RFC and DNS names. The name
+    must contain only lowercase alphanumeric characters and dashes.
+    
+    For example: `my-direct-appdynamics-data-source`
+    
+7. Enter a **Description** (optional).\
+    Add the team or owner details and explain the purpose of creating this
+    specific data source. Adding a description can provide immediate
+    context for any team member.
+    
+### Big Query
 
-**Video 1:** Logging in and changing user name and password 
+1. Upload **Service Account Key File** to authenticate with Google Cloud.<br>
+   The file must be in JSON format. [See the following reference](https://cloud.google.com/iam/docs/creating-managing-service-account-keys).
 
-[![Alt text](https://img.youtube.com/vi/AZt65Sc6S7o/0.jpg)](https://www.youtube.com/watch?v=AZt65Sc6S7o)
+2. Enter a **Project** name.\
+   The **Project** field is intended for use in situation where multiple users are spread across multiple teams or 
+   projects. When **Project** field is left blank the typical **default** value appears.
+   
+3. The **Display Name** appears automatically when a name is entered into the **Name** field. 
 
-## Adding a data source
-A data source is needed before you can create your first dashboard. There are multiple ways to add a data source. The quickest way to add your data source is to:
+3. Enter a **Name** (required).\
+    A **Name** is required because metadata names are unique within each
+    project and are validated against some RFC and DNS names. The name
+    must contain only lowercase alphanumeric characters and dashes.
+    
+    For example: `my-direct-big-query-data-source`
+    
+4. Enter a **Description** (optional).\
+    Add the team or owner details and explain the purpose of creating this
+    specific data source. Adding a description can provide immediate
+    context for any team member.
+    
+ ### Datadog
 
-1. Click the cog icon.
-    If the side menu is not visible, click the Grafana icon in the upper left corner.
-2. Click the green **Add data source** box. 
-    Alternatively, you can add data sources by hovering the mouse over the cog icon until the **Configuration** menu appears and click **Data Sources**.
-3. Select a data source from the list.
-    In this example we use MySQL as the data source.
+1.  Add the Datadog **API endpoint** to connect to your data source
+    (required).
 
-## Naming the data source
-It’s time to name your newly created data source.
+2.  Enter your Datadog **API Key**.<br>
+    For more information about how to manage your **API Key**, see [*API and Application Keys*](https://docs.datadoghq.com/account_management/api-app-keys/).
 
-1. Type a name for your new data source in the **Name** field. 
-    In the this example we’ve named the MySQL data source Hugo.
-2. View [Supported data sources](https://grafana.com/docs/features/datasources/#supported-data-sources/)  for more information about how to configure your data source.
-3. Click **Save and Test** after the data source is configured.
-    If you click **Save and Test** before configuring your data source an error will appear.
+3. Enter your Datadog **Application Key**.<br>
+   For more information about how to manage your **Application Key**, see [*API and Application Keys*](https://docs.datadoghq.com/account_management/api-app-keys/).
 
-**Video 2:** Adding and naming the data source 
+2.  Enter a **Project** name.\
+    The **Project** field is intended for use in situations where multiple
+    users are spread across multiple teams or projects. When
+    the **Project** field is left blank the typical **default** value
+    appears.
+    
+3.  The **Display Name** appears automatically when a name is entered into the **Name** field.
 
-[![Alt text](https://img.youtube.com/vi/gENV_EXPG5o/0.jpg)](https://www.youtube.com/watch?v=gENV_EXPG5o)
+4.  Enter a **Name** (required).\
+    A **Name** is required because metadata names are unique within each
+    project and are validated against some RFC and DNS names. The name
+    must contain only lowercase alphanumeric characters and dashes.
 
+    For example: `my-direct-datadog-data-source`
 
+5.  Enter a **Description** (optional).\
+    Add the team or owner details and explain the purpose of creating this
+    specific data source. Adding a description can provide immediate
+    context for any team member.
+    
+### New Relic
 
+1.  Enter your New Relic **Account ID** to connect to your data source
+    (required).
+ 
+2. Enter the **Insights Query Key**.
 
+3.  Enter a **Project** name.\
+    The **Project** field is intended for use in situations where multiple
+    users are spread across multiple teams or projects. When
+    the **Project** field is left blank, the typical **default** value appears.
 
+4.  The **Display Name** appears automatically when a name is entered into the **Name** field.
+
+5.  Enter a **Name** (required).\
+    A **Name** is required because metadata names are unique within each
+    project and are validated against some RFC and DNS names. The name
+    must contain only lowercase alphanumeric characters and dashes.
+
+    For example: `my-direct-new-relic-data-source`
+
+6.  Enter a **Description** (optional).\
+    Add the team or owner details and explain the purpose of creating this
+    specific data source. Adding a description can provide immediate
+    context for any team member.
+    
+### Splunk
+
+1.  Enter the **API Endpoint URL** to connect to your data source (required).<br>
+    The URL must start with `https://`
+
+2.  Enter the **Access Token**.<br>
+    The **Access Token** is generated from Splunk.
+
+2.  Enter a **Project** name.\
+    The **Project** field is intended for use in situations where multiple
+    users are spread across multiple teams or projects. When
+    the **Project** field is left blank the typical **default** value
+    appears.
+
+3.  The **Display Name** appears automatically when a name is entered into the **Name** field.
+
+4.  Enter a **Name** (required).\
+    A **Name** is required because metadata names are unique within each
+    project and are validated against some RFC and DNS names. The name
+    must contain only lowercase alphanumeric characters and dashes.
+
+    For example: `my-direct-splunk-data-source`
+
+5.  Enter a **Description** (optional).\
+    Add the team or owner details and explain the purpose of creating this
+    specific data source. Adding a description can provide immediate
+    context for any team member.
+	
+### Splunk Observability
+
+1.  Add the **API Endpoint URL** to connect to your data source (required).
+    
+    For example: https://api.<code>REALM</code>.signalfx.com
+
+2. Enter the **Access Token** environment variable for authentication with the organization API Access Token.<br>
+   See [Create and manage organization access tokens](https://docs.splunk.com/Observability/admin/authentication-tokens/org-tokens.html#admin-org-tokens).
+
+3. Enter a **Project** name.\
+    The **Project** field is intended for use in situations where multiple
+    users are spread across multiple teams or projects. When
+    the **Project** field is left blank the typical **default** value
+    appears.
+
+4. The **Display Name** appears automatically when a name is entered into the **Name** field.
+
+5. Enter a **Name** (required).\
+    A **Name** is required because metadata names are unique within each
+    project and are validated against some RFC and DNS names. The name
+    must contain only lowercase alphanumeric characters and dashes.
+
+    For example: `my-direct-splunk-observability-data-source`
+
+6. Enter a **Description** (optional).\
+    Add the team or owner details and explain the purpose of creating this
+    specific data source. Adding a description can provide immediate
+    context for any team member.
+	
+### ThousandEyes
+
+1. Enter the **OAuth Bearer Token** for authentication with the ThousandEyes API.<br>
+   When the Nobl9 agent is deployed for ThousandEyes, you must to provide a `THOUSANDEYES_OAUTH_BEARER_TOKEN` environment variable for authentication with ThousandEyes API.<br>
+   
+   To get the **OAUTH_BEARER_TOKEN**:
+
+   - Log in to your ThousandEyes account.
+   - Navigate to **Account Settings**.
+   - Select **Users and Roles**.
+   - Navigate to the bottom of the page and you will see **User API Tokens**.
+   - Select **OAuth Bearer Token**.<br>
+     Currently, Nobl9 only supports OAUTH_BEARER_TOKEN.
+
+2. Enter a **Project** name.\
+   The **Project** field is intended for use in situation where multiple users are spread across multiple teams or 
+   projects. When **Project** field is left blank the typical **default** value appears.
+   
+3. The **Display Name** appears automatically when a name is entered into the **Name** field.
+
+4. Enter a **Name** (required).\
+    A **Name** is required because metadata names are unique within each
+    project and are validated against some RFC and DNS names. The name
+    must contain only lowercase alphanumeric characters and dashes.
+    
+    For example: `my-direct-thousandeyes-data-source`
+    
+5. Enter a **Description** (optional).\
+    Add the team or owner details and explain the purpose of creating this
+    specific data source. Adding a description can provide immediate
+    context for any team member.
